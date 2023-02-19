@@ -37,21 +37,3 @@ function playRound(playerSelection, computerSelection) {
     }
     return result;    
 }
-
-let playerScore = 0;
-let computerScore = 0;
-
-function game() {
-    while(playerScore < 5 && computerScore < 5) {
-            let playerSelection = prompt("Choose your weapon against computer: Rock-Paper-Scissors").toLowerCase();
-            let computerSelection = getComputerChoice(choices);
-            console.log(playRound(playerSelection, computerSelection));
-    }
-    if (playerScore === 5) {
-        console.log("You Win! Refresh to replay🎉");
-    } else {
-        console.log("You Lose! Refresh to replay😝");
-    }
-}
-
-game();
