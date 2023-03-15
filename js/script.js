@@ -139,3 +139,9 @@ const gameOver = function ifTheConditionOfTheGameIsOverPassTheResetButton() {
   });
   return;
 };
+
+/** TODO list
+ * Refactor code
+ * add modal box because it's interesting otherwise it looks neat
+ * logic error for button it continues forever
+ */
