@@ -5,9 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="js/script.js"></script>
+    <script defer src="js/script.js"></script>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <h1 style="text-align: center; font-family: sans-serif; color: coral;">Open your console</h1>
+    <div class="header-h1">
+      <h1>Rock Paper Scissors</h1>
+    </div>
+
+    <p class="main-h2">
+      Race to five
+    </p>
+
+    <div class="choices">
+      <p>Your Choice:</p>
+      <p>Computer Choice:</p>
+    </div>
+
+    <div class="displayChoices">
+      <div class="playerChoice"></div>
+      <div class="versusEmoji"><img  draggable="false" src="img/vs-button_1f19a.png" alt="vsEmoji"></div>
+      <div class="computerChoice"></div>
+    </div>
+
+    <div class="display-result">
+      <div class="result"></div>
+    </div>
+
+    <div class="finalScore button-replay">
+    </div>
+
+    <div class="scoring scoring-display-flex-center-spaceevenly ">
+      <div>Player: <span class="player-score">0</span></div>
+      <div>Computer: <span class="computer-score">0</span></div>
+    </div>
+
+    <div class="buttons">
+      <div class="wrapper">
+        <button class="rock"><img draggable="false" src="img/rock_1faa8.png" alt="rock"></button>
+      <p>Rock</p>
+      </div>
+      <div class="wrapper">
+        <button class="paper"><img draggable="false" src="img/page-facing-up_1f4c4.png" alt="paper"></button>
+        <p>Paper</p>
+      </div>
+      <div class="wrapper">
+        <button class="scissors"><img draggable="false" src="img/scissors_2702-fe0f.png" alt="scissors"></button>
+        <p>Scissors</p>
+      </div>
+    </div>
+
+    <div class="footer">
+      <!-- TODO: add JavaScript for the year -->
+      Copyright &copy; FireDragon 2023
+    </div>
+
+
 </body>
 </html>
