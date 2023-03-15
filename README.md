@@ -4,10 +4,6 @@ Rock paper scissors is a hand game, usually played between two people, in which 
 
 ## Skills demonstrated
 
-Understanding the problem, planning the solution, Pseudocode, and Solving the puzzles. String, Variable, conditional, function, and number. This project need other JS technology like while loops and arrays.
+Understanding the problem, planning the solution, pseudocoding, and solving the puzzles. JavaScript fundamentals such as Strings, Variables, loops, arrays, conditional, function, and number. 
 
-### feature
-
-- Cancelling the game stops the game I did this not by mistake if you see a referenceError I'd consider it as a feature because you cancel the game that means you don't want to continue. maybe hehe.
-
-#### copyright &copy; 2023 FireDragonGod
+Added a simple User Interface with the use of web technology such as fundamentals of DOM Manipulation and events.
