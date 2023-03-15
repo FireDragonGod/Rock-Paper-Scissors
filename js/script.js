@@ -101,3 +101,41 @@ const userChoice = function userChoiceClicksOnTheButton() {
 };
 
 userChoice();
+
+const gameOver = function ifTheConditionOfTheGameIsOverPassTheResetButton() {
+  const content = document.querySelector('.finalScore');
+  const resetButton = document.createElement('button');
+
+  if (playerScore >= 5) {
+    content.textContent = 'You Win!';
+    resetButton.textContent = 'Play Again';
+    resetButton.style.cssText = 'padding: 12px 24px; margin-left: 24px; background-color: #001221; font-weight: bolder; color: white';
+    content.appendChild(resetButton);
+  }
+
+  if (computerScore >= 5) {
+    content.textContent = 'You Lose!';
+    resetButton.textContent = 'Play Again';
+    resetButton.style.cssText = 'padding: 12px 24px; margin-left: 24px; background-color: #001221; font-weight: bolder; color: white';
+    content.appendChild(resetButton);
+  }
+
+  const playerScoreDoc = document.querySelector('.player-score');
+  const computerScoreDoc = document.querySelector('.computer-score');
+  const result = document.querySelector('.result');
+
+  resetButton.addEventListener('click',  function resetButtonForReplay() {
+    playerScore = 0;
+    computerScore = 0;
+    playerScoreDoc.textContent = `${playerScore}`;
+    computerScoreDoc.textContent = `${computerScore}`;
+    result.textContent = ``;
+    content.removeChild(resetButton);
+    content.textContent = ``;
+    playerChoiceDisplay.setAttribute('src', '');
+    playerChoice.appendChild(playerChoiceDisplay);
+    computerChoicesDisplay.setAttribute('src', '');
+    computerChoices.appendChild(computerChoicesDisplay);
+  });
+  return;
+};
