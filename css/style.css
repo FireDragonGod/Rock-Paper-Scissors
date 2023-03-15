@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Sacramento&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  /* dark mode reference */
+  background-color: #001221; 
+  color: #e3e3e3;
+}
+
+
+.header-h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  border-bottom: 1px solid hwb(0 50% 50%);
+}
+
+.main-h2 { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 36px;
+}
+
+.displayChoices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.display-result > .result{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.finalScore, .buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  border-radius: 0.75rem;
+  background-color: #001221; 
+}
+
+.scoring {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  min-height: 50px;
+}
+
+.wrapper > p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100px;
+  border-top: 1px solid gray;
+}
+
+.versusEmoji  > img {
+  height: auto;
+  width: 50px;
+  margin: 0 100px;
+}
+
+.putItInTheRightUpperCorner {
+  margin-left: auto;
+}
