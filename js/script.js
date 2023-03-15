@@ -1,57 +1,31 @@
-console.log("Hello, World!");
-console.log("If you're surprised! Good thing if you cancel the game stops. Cool right? It stops the program.")
+const helloWorld = 'Hello, World!';
 
-let choices = ["rock", "paper", "scissors"];
+const choices = [
+  'rock', 
+  'paper', 
+  'scissors',
+];
 
-function getComputerChoice(choices) {
-    return choices[Math.floor(Math.random() * choices.length)]
-}
+const choiceDisplaying = document.querySelector('#displayChoices');
+const computerChoices = document.querySelector('.computerChoice');
+const computerChoicesDisplay = document.createElement('img');
 
-function playRound(playerSelection, computerSelection) {
-    let result;
-    if (playerSelection == computerSelection) {
-        result = "It's a tie";
-    } else if (playerSelection == "rock")
-        if (computerSelection == "scissors") {
-        result = "You win! rock destroys scissors.";
-        playerScore += 1;
-    } else {
-        result = "Computer wins! Paper wraps rock"
-        computerScore +=1;
-    } else if (playerSelection == "paper") 
-        if (computerSelection == "rock") {
-        result = "You win! paper wraps rock";
-        playerScore += 1;
-    } else {
-        result = "Computer wins! Scissors cuts paper"
-        computerScore += 1;
-    } else if (playerSelection == "scissors") 
-        if (computerSelection == "paper") {
-        result = "you win! scissors cuts paper";
-        playerScore += 1;
-    } else {
-        result = "Computer wins! Rock destroys scissors!"
-        computerScore += 1;
-    } else {
-        result = "Input not supported. choose rock, paper, or scissors";
-    }
-    return result;    
-}
+const computerChoice = function getComputerChoice(choices) {
+  let choice = choices[Math.floor(Math.random() * choices.length)];
+  if (choice === 'rock') {
+    computerChoicesDisplay.setAttribute('src', 'img/rock_1faa8.png');
+    computerChoices.appendChild(computerChoicesDisplay);
+  }
+  if (choice === 'paper') {
+    computerChoicesDisplay.setAttribute('src', 'img/page-facing-up_1f4c4.png');
+    computerChoices.appendChild(computerChoicesDisplay);
+  }
+  if (choice === 'scissors') {
+    computerChoicesDisplay.setAttribute('src', 'img/scissors_2702-fe0f.png');
+    computerChoices.appendChild(computerChoicesDisplay);
+  }
+  return choice;
+};
 
-let playerScore = 0;
-let computerScore = 0;
 
-function game() {
-    while(playerScore < 5 && computerScore < 5) {
-            let playerSelection = prompt("Choose your weapon against computer: Rock-Paper-Scissors").toLowerCase();
-            let computerSelection = getComputerChoice(choices);
-            console.log(playRound(playerSelection, computerSelection));
-    }
-    if (playerScore === 5) {
-        console.log("You Win! Refresh to replay🎉");
-    } else {
-        console.log("You Lose! Refresh to replay😝");
-    }
-}
 
-game();
