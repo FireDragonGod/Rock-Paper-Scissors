@@ -69,3 +69,35 @@ const playRound = function setTheGameRules(playerSelection, computerSelection) {
   }
   return result;
 };
+
+const rock = document.querySelector('.rock');
+const paper = document.querySelector('.paper');
+const scissors = document.querySelector('.scissors');
+const playerChoice = document.querySelector('.playerChoice');
+const playerChoiceDisplay = document.createElement('img');
+
+const userChoice = function userChoiceClicksOnTheButton() {
+
+  rock.addEventListener('click', function rockPlayerSelection() { 
+    playRound('rock', computerChoice(choices));
+    playerChoiceDisplay.setAttribute('src', 'img/rock_1faa8.png');
+    playerChoice.appendChild(playerChoiceDisplay);
+    gameOver();
+  });
+
+  paper.addEventListener('click', function rockPlayerSelection() { 
+    playRound('paper', computerChoice(choices));
+    playerChoiceDisplay.setAttribute('src', 'img/page-facing-up_1f4c4.png');
+    playerChoice.appendChild(playerChoiceDisplay);
+    gameOver();
+  });
+
+  scissors.addEventListener('click', function rockPlayerSelection() { 
+    playRound('scissors', computerChoice(choices));
+    playerChoiceDisplay.setAttribute('src', 'img/scissors_2702-fe0f.png');
+    playerChoice.appendChild(playerChoiceDisplay);
+    gameOver();
+  });
+};
+
+userChoice();
